@@ -1,0 +1,55 @@
+[my original notes on variables]
+
+// variables collected 16 sep 2009 - ?
+
+	CD(0xFF3CB4, "GameMode", "");
+	CW(0xFF5736, "CurrentPlayer", "");
+	CW(0xFF5756, "TMachPistonLights", "");
+	CD(0xFF5758, "PlayerStats", ""); // array of pointers?
+	CW(0xFF75B0, "CurrentLevel", "");
+	CB(0xFF7838, "GamePaused", "");
+	CB(0xFFF8D6, "ShouldPlayMusic", "");
+	CB(0xFFEDAA, "TMachMultiplier", "");
+	CD(0xFFF2CA, "JoypadsPressed", "");
+	CD(0xFFF2CE, "JoypadsHeld", "");
+
+song list
+0	The Machine theme
+28	new life jingle
+45	either lose life jingle or game over jingle
+7C	ring collect sound effect
+
+player stats
+offset	size	description
+46	1	life count
+48	1	ring count
+
+observations on GameMode
+0	sega screen, title screen, intro movie, options screen, hi score screen
+1	level intro
+2	level
+3	multiball stage
+4	level complete - boss chamber destruction
+5	?
+6	level complete - score tally and bonus stage (wtf)
+
+18:50	snkenjoi	inf lives
+18:50	snkenjoi	0DC250:6004
+18:50	snkenjoi	0D43EE:00FF (start)
+18:50	snkenjoi	level start pointer
+18:50	snkenjoi	0D43A6:7601
+18:50	snkenjoi	rom addresses
+18:51	andlabs	PAR codes
+18:51	andlabs	so
+18:51	andlabs	DC250 can't be the live count
+18:51	andlabs	unless they initialize it to 4
+18:51	andlabs	er
+18:51	andlabs	$60
+18:51	andlabs	oh wait
+18:51	andlabs	I see
+18:52	snkenjoi	the values are ones I've written
+18:52	snkenjoi	I think?
+18:52	andlabs	meh
+18:52	andlabs	this will help though
+18:52	andlabs	(eventually)
+18:53	snkenjoi	heh
