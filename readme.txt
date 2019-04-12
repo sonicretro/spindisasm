@@ -5,7 +5,7 @@ You assume any and all responsibility for using this content responsibly. Sonic 
 
 This is the Sonic Spinball disassembly by Andlabs converted to a .asm file and fixed up to produce an accurate build in asm68k. 24 lines (search for FIXME) have been edited to inline hex in order to get a bit-perfect output quickly, PRs are welcome for fixes. There are at least some places where IDA has gotten ahead of itself and interpreted data as addresses, see eg. the references in the padding at the bottom. There's still work to be done on this before I'd be convinced it was safe to hack.
 
-To build it, just drop asm68k in the folder and hit build.bat.
+To build it, just drop asm68k in the folder and hit build.bat. If you make any edits, you'll need to fix the checksum yourself (I think GENS should be able to do it for you too), but then I suspect as it stands right now any significant edits will just break the ROM.
 
 Andlabs' original .idb is attached in unaltered form for reference. The _ida.txt file includes all the fixes in .asm, but maintains the ROM:xxxxxxxx line headers from IDA for convenience (I used it to help brute-force a first working build).
 
